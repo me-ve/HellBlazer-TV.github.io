@@ -114,7 +114,7 @@ select {
 	text-align: left;
 }
 
-#nqonly {
+#nqonly, #autocopy {
 	font-family: Montserrat;
 	font-size: 15px;
 	color: #ffffff;
@@ -213,7 +213,7 @@ select {
 }
 
 /* .forceNQ */
-.forceNQ {
+.forceNQ, .enableAutoCopy {
 	width: 80px;
 	height: 24px;
 	background: #333;
@@ -223,7 +223,7 @@ select {
 	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
 }
 
-.forceNQ:after {
+.forceNQ:after, .enableAutoCopy:after {
 	content: 'OFF';
 	color: #000;
 	position: absolute;
@@ -234,7 +234,7 @@ select {
 	text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
 }
 
-.forceNQ:before {
+.forceNQ:before, .enableAutoCopy:before{
 	content: 'ON';
 	color: #27ae60;
 	position: absolute;
@@ -244,7 +244,7 @@ select {
 	font-weight: bold;
 }
 
-.forceNQ label {
+.forceNQ label, .enableAutoCopy label {
 	display: block;
 	width: 34px;
 	height: 20px;
@@ -260,11 +260,11 @@ select {
 	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-.forceNQ input[type=checkbox] {
+.forceNQ input[type=checkbox], .enableAutoCopy input[type=checkbox]  {
 	visibility: hidden;
 }
 
-.forceNQ input[type=checkbox]:checked+label {
+.forceNQ input[type=checkbox]:checked+label, .enableAutoCopy input[type=checkbox]:checked+label {
 	left: 43px;
 }
 

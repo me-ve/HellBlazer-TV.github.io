@@ -292,11 +292,11 @@ $(document).ready(function () {
 			missingCivs = neededCivs - enabledCivs;
 			$("#results").html("<p class='drawerror'>There are not enough available civilizations to make the draw!</br>Please unban at least another " + missingCivs + " civilizations and try again!</p>");
 		} else {
-
+			const enableAutoCopy = ($('#enableAutoCopy').is(':checked'))
 			// pick 3 rand civs for each player
 			var i;
 			var k;
-			var picksHTML = "<p class='rescopied'>Draft results have been copied to clipboard</p>";
+			var picksHTML = enableAutoCopy ? "<p class='rescopied'>Draft results have been copied to clipboard</p>" : "";
 			var resCopy = ""
 
 			picksHTML = picksHTML + "<table class='drawresults'>";
@@ -351,7 +351,9 @@ $(document).ready(function () {
 				copyToClipboard(document.getElementById("copyTarget"));
 			});
 
-			$("#copyres").click();
+			if (enableAutoCopy) {
+				$("#copyres").click();
+			}
 
 			function copyToClipboard(elem) {
 				// create hidden text element, if it doesn't already exist
